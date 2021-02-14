@@ -1,14 +1,16 @@
 <template>
   <section class="px-2 pt-16 pb-6 bg-white md:px-0">
-    <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-      <template v-for="(post, index) in posts">
-        <list-item
-          :key="`post-${index}`"
-          :id="post.id"
-          :title="post.title"
-          :description="post.description"
-        />
-      </template>
+    <div class="container max-w-6xl px-8 mx-auto xl:px-5">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-20 items-start">
+        <template v-for="(post, index) in posts">
+          <list-item
+            :key="`post-${index}`"
+            :id="post.id"
+            :title="post.title"
+            :description="post.description"
+          />
+        </template>
+      </div>
     </div>
   </section>
 </template>
